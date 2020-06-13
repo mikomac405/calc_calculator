@@ -35,6 +35,10 @@ private slots:
 
     void on_lineEdit_textChanged(const QString &arg1);
 
+    void on_pushButton_2_clicked();
+
+    void on_amount_valueChanged(double arg1);
+
 private:
     Ui::MainWindows *ui;
 };

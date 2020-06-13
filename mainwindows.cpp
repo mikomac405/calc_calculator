@@ -86,7 +86,7 @@ void MainWindows::incProgress()
 {
     QListWidgetItem *selItem = ui->foodList->currentItem()->clone();
     QString text = selItem->text();
-    int cut;
+    int cut{};
     for(int i = 0; i < text.size(); i++)
     {
         if(text[i] == '/'){ cut = i+1; }
@@ -104,7 +104,7 @@ void MainWindows::decProgress()
 {
     QListWidgetItem *selItem = ui->eatenList->currentItem()->clone();
     QString text = selItem->text();
-    int cut;
+    int cut{};
     for(int i = 0; i < text.size(); i++)
     {
         if(text[i] == '/'){ cut = i+1; }
@@ -157,4 +157,11 @@ void MainWindows::on_lineEdit_textChanged(const QString &arg1)
             }
         }
     }
+}
+
+void MainWindows::on_pushButton_2_clicked()
+{
+    ui->label_10->setNum(0);
+    ui->label_10->setStyleSheet("font: 75 15pt 'MS Shell Dlg 2';\ncolor: rgb(255, 255, 255);");
+    ui->eatenList->clear();
 }
