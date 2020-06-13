@@ -37,8 +37,6 @@ private slots:
 
     void on_pushButton_2_clicked();
 
-    void on_amount_valueChanged(double arg1);
-
 private:
     Ui::MainWindows *ui;
 };
