@@ -1,5 +1,7 @@
 #include "mainwindows.h"
 
+// Kategorie jedzenia wraz z ich elementami
+
 QStringList PieczywoIZboza = {
     "Chleb graham [100g/221kcal]",
     "Chleb pita [100g/262kcal]",

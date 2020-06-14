@@ -18,6 +18,9 @@ public:
     ~MainWindows();
 
 private slots:
+
+    //Deklaracja funkcji na postrzególnych slotach elementów interfejsu użytkownika
+
     void on_pushButton_clicked();
 
     void on_foodCategory_currentTextChanged(const QString &arg1);
@@ -31,7 +34,6 @@ private slots:
     void incProgress();
 
     void decProgress();
-;
 
     void on_lineEdit_textChanged(const QString &arg1);
 

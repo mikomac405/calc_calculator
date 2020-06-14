@@ -2,7 +2,7 @@
 #include "ui_mainwindows.h"
 #include "food.cpp"
 
-
+// Konstruktor -> inicjuje okno i wszystkie elementy UI
 MainWindows::MainWindows(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindows)
@@ -10,11 +10,16 @@ MainWindows::MainWindows(QWidget *parent)
     ui->setupUi(this);
 }
 
+
+// Destruktor -> usuwa całe UI, po czym zostaje zamknięte okno aplikacji
 MainWindows::~MainWindows()
 {
     delete ui;
 }
 
+
+// Funkcja odpowiadająca z przypisanie nowej kaloryczności dla użytkownika
+// Wywoływana jest poprzez naciśniecie przecisku "Zatwierdź" w sekcji konfiguracji użytkownika
 void MainWindows::on_pushButton_clicked()
 {
     QString sex = ui->sex->currentText();
@@ -37,6 +42,9 @@ void MainWindows::on_pushButton_clicked()
 }
 
 
+
+// Funkcja odpowiadająca za wyświelanie elementów wybranej kategorii jedzenia
+// Wywoływana jest poprzez zmianę aktywnego elementu combo box'u z kategoriami
 void MainWindows::on_foodCategory_currentTextChanged(const QString &arg1)
 {
     ui->foodList->clear();
@@ -76,14 +84,20 @@ void MainWindows::on_foodCategory_currentTextChanged(const QString &arg1)
 
 }
 
+// Funkcja odpowiadająca za dodanie POJEDYNCZEGO dania do listy posiłków spożytych
+// Wywoływana jest przez funkcję on_addMeal_clicked()
 void MainWindows::add_current_item()
 {
     QListWidgetItem *selItem = ui->foodList->currentItem()->clone();
     ui->eatenList->addItem(selItem);
 }
 
+// Funkcja odpowiadająca za podwyższenie wartości kalorii
+// Wywoływana jest przez on_addMeal_clicked()
 void MainWindows::incProgress()
 {
+    // Funkcja wycina z łańcucha znakowego (danego elementu) wartość liczbową
+    // i dodaję ją do poprzedniej wartości spożytych kalorii
     QListWidgetItem *selItem = ui->foodList->currentItem()->clone();
     QString text = selItem->text();
     int cut{};
@@ -100,8 +114,12 @@ void MainWindows::incProgress()
     if(curVal>ui->label_11->text().toInt()){ui->label_10->setStyleSheet("font: 75 15pt 'MS Shell Dlg 2';\ncolor: rgb(255, 000, 000);");}
 }
 
+// Funkcja odpowiadająca za podwyższenie wartości kalorii
+// Wywoływana jest przez on_removeMeal_clicked()
 void MainWindows::decProgress()
 {
+    // Funkcja wycina z łańcucha znakowego (danego elementu) wartość liczbową
+    // i odejmuje ją od poprzedniej wartości spożytych kalorii
     QListWidgetItem *selItem = ui->eatenList->currentItem()->clone();
     QString text = selItem->text();
     int cut{};
@@ -118,7 +136,9 @@ void MainWindows::decProgress()
     if(curVal<=ui->label_11->text().toInt()){ui->label_10->setStyleSheet("font: 75 15pt 'MS Shell Dlg 2';\ncolor: rgb(255, 255, 255);");}
 }
 
-
+// Funkcja odpowiadająca za dodanie n razy zaznaczonego dania do listy posiłków spożytych i podwyższniu
+// ilości kalorii spożytych
+// Wywoływana poprzez kliknięcie przycisku "Dodaj posiłek"
 void MainWindows::on_addMeal_clicked()
 {
     if(ui->foodList->selectedItems().size() != 0)
@@ -133,6 +153,10 @@ void MainWindows::on_addMeal_clicked()
 
 }
 
+
+// Funkcja odpowiadająca za usunięcie zaznaczonego dania z listy posiłków spożytych i zmniejszeniu
+// ilości kalorii spożytych
+// Wywoływana poprzez kliknięcie przycisku "Usuń posiłek"
 void MainWindows::on_removeMeal_clicked()
 {
     if(ui->eatenList->selectedItems().size() != 0)
@@ -143,7 +167,8 @@ void MainWindows::on_removeMeal_clicked()
     ui->eatenList->takeItem(row);
     }
 }
-
+// Funkcja odpowiadająca za wyszukanie po jego nazwie i zaznaczenie go
+// Wywoływana przez zmianę tekstu w formularzu pod etykietą "Wyszukaj w kategorii:"
 void MainWindows::on_lineEdit_textChanged(const QString &arg1)
 {
     int n = ui->foodList->count();
@@ -159,6 +184,9 @@ void MainWindows::on_lineEdit_textChanged(const QString &arg1)
     }
 }
 
+// Funkcja odpowiadająca za usunięcie wszystkich zjedznoych posiłków z listy
+// i wyzerowanie licznika kalorii
+// Wywoływana przez kliknięcie przycisku "Wyczyść listę"
 void MainWindows::on_pushButton_2_clicked()
 {
     ui->label_10->setNum(0);

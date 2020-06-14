@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>771</height>
+    <width>1700</width>
+    <height>1200</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -17,10 +17,13 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>MainWindows</string>
+   <string>Kalkulator kalorii</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(34, 34, 34);</string>
+   <string notr="true">background-color: rgb(77, 77, 77);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -345,7 +348,7 @@ QPushButton:hover {
     <item row="3" column="1">
      <widget class="QLineEdit" name="lineEdit">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -515,7 +518,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1700</width>
      <height>21</height>
     </rect>
    </property>
