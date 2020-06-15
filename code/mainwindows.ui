@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindows</class>
+ <widget class="QMainWindow" name="MainWindows">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1700</width>
+    <height>1200</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Kalkulator kalorii</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(77, 77, 77);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="3" column="8" rowspan="3">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+  font: 12pt &quot;Verdana&quot;;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  transition-duration: 0.4;
+}
+
+QPushButton:hover {
+  background-color: #4CAF50;
+  color: white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Wyczyść listę</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2" colspan="7">
+     <widget class="QListWidget" name="eatenList">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="7">
+     <widget class="QLabel" name="label_13">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 15pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>kcal</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="3">
+     <widget class="QLabel" name="label_10">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 15pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Filtr kategorii jedzenia:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2" rowspan="3" colspan="6">
+     <widget class="QPushButton" name="removeMeal">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+  font: 12pt &quot;Verdana&quot;;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  transition-duration: 0.4;
+}
+
+QPushButton:hover {
+  background-color: #4CAF50;
+  color: white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Usuń posiłek</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Lista posiłków do wyboru:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="6">
+     <widget class="QLabel" name="label_11">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 15pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>2000</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="label_14">
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Wyszukaj w kategorii:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="4">
+     <widget class="QLabel" name="label_12">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 15pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>kcal</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="9">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="title">
+       <string>Konfiguracja użytkownika</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="2" column="3">
+        <widget class="QSpinBox" name="age">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(236, 236, 236);
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="weight">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(236, 236, 236);
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="maximum">
+          <double>200.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Wiek (Lata)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Wzrost (cm)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Masa ciała (kg)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QDoubleSpinBox" name="height">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(236, 236, 236);
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="maximum">
+          <double>250.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string>font: 75 9pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Płeć</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QComboBox" name="sex">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(236, 236, 236);
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="editable">
+          <bool>false</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>Mężczyzna</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Kobieta</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QPushButton" name="pushButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+  font: 10pt &quot;Verdana&quot;;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  transition-duration: 0.4;
+}
+
+QPushButton:hover {
+  background-color: #4CAF50;
+  color: white;
+}</string>
+         </property>
+         <property name="text">
+          <string>Zatwierdź</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QComboBox" name="foodCategory">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(236, 236, 236);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alkohol</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fastfood</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mięso i wędliny</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Napoje</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nabiał</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Owoce</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pieczywo, kasze, makarony, zboża</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Produkty gotowe</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ryby i owoce morza</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Słodycze</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zupy</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_8">
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Ilość (porcje):</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1" rowspan="2">
+     <widget class="QPushButton" name="addMeal">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+  font: 10pt &quot;Verdana&quot;;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  transition-duration: 0.4;
+}
+
+QPushButton:hover {
+  background-color: #4CAF50;
+  color: white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Dodaj posiłek</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2" colspan="4">
+     <widget class="QLabel" name="label_7">
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Lista spożytych posiłków:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0" colspan="2">
+     <widget class="QListWidget" name="foodList">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="5">
+     <widget class="QLabel" name="label_9">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 15pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QSpinBox" name="amount">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(236, 236, 236);</string>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1700</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
